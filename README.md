@@ -4,7 +4,7 @@
 
 ## เริ่มต้น
 
-In the project directory, you can run:
+ดาวน์โหลดไฟล์ todolist และติดตั้ง
 
 ### การติดตั้ง
 ติดตัง modules
