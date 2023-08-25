@@ -1,0 +1,230 @@
+:root body.dark-mode {
+  --textcolor: #ffffff;
+  --bg-input: hsl(235, 24%, 19%);
+  --clicktext: hsl(237, 9%, 61%);
+  --subtext: hsl(236, 9%, 61%);
+  --input: #000;
+  --clickbox: #000;
+}
+:root body.light-mode {
+  --textcolor: hsl(235, 21%, 11%);
+  --bg-input: hsl(0, 0%, 98%);
+  --clicktext: hsl(236, 9%, 61%);
+  --subtext: hsl(236, 9%, 61%);
+  --input: #000;
+  --clickbox: #000;
+}
+.sub {
+  color: var(--subtext);
+}
+.sub:hover {
+  cursor: pointer;
+  color: var(--textcolor);
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: 18px;
+}
+h1 {
+  font-weight: 700;
+  color: hsl(0, 0%, 98%);
+}
+.fw700 {
+  font-weight: 700;
+}
+.form-control {
+  font-size: 1.25rem;
+}
+body.light-mode {
+  background-color: white;
+  color: var(--textcolor);
+}
+.fs-2 {
+  color: var(--textcolor);
+}
+.text {
+  color: var(--textcolor);
+}
+.w33 {
+  width: 33%;
+}
+body.dark-mode {
+  background-color: black;
+  color: var(--textcolor);
+}
+.text-center-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+p {
+  color: var(--textcolor);
+  opacity: 0.8;
+}
+.elem:hover p{
+  opacity: 1;
+  cursor: pointer;
+}
+.cross {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.cross path{
+  fill: var(--bg-input);
+}
+.elem:hover .cross path{
+  fill:var(--clicktext);
+}
+.fs-3:hover{
+  cursor: pointer;
+}
+.checkbox-wrapper-15 .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.checkbox-wrapper-15 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-15 .cbx span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid hsl(234, 39%, 85%);
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-15 .cbx span:first-child svg {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 6px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.alert-primary {
+  --bs-alert-color: var(--bg-input);
+  --bs-alert-bg: var(--bg-input);
+  --bs-alert-border-color: var(--bg-input);
+}
+/* background aura */
+.checkbox-wrapper-15 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506eec;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  transition-delay: 0.2s;
+}
+.form-control:focus {
+  color: var(--textcolor);
+  background-color: var(--bg-input);
+  border: unset;
+  box-shadow: none;
+}
+.form-control {
+  color: var(--textcolor);
+  background: var(--bg-input);
+  border: unset;
+}
+.clicktext {
+  text-decoration: line-through;
+  color: var(--clicktext);
+}
+/* hovercolor */
+.checkbox-wrapper-15 .cbx:hover span:first-child {
+  border-color: hsl(237, 86%, 64%);
+}
+/* .checkbox-wrapper-48 input:not(:checked):hover {
+  border-color: transparent;
+  background: linear-gradient(#fff, #fff) padding-box,  border-box;
+} */
+/* click color */
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child {
+  border-color: linear-gradient(
+    135deg,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  animation: check-15 0.6s ease;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-15 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(2.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.top50 {
+  top: 120px;
+}
+@keyframes check-15 {
+  50% {
+    transform: scale(1.2);
+  }
+}
+.mobile {
+  display: none;
+}
+.mobile.row {
+  display: none;
+}
+.pc {
+  display: unset;
+}
+
+.pc.row {
+  display: flex;
+}
+@media (max-width: 1450px) {
+  .w33 {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .w33 {
+    width: 95%;
+  }
+  .mobile {
+    display: unset;
+  }
+  .pc {
+    display: none;
+  }
+  .mobile.row{
+    display: flex;
+  }
+  .mobile.alert{
+    display: block;
+  }
+  .pc.row {
+    display: none;
+  }
+  .cross path{
+    fill: var(--clicktext);
+  }
+}
